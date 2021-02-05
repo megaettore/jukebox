@@ -43,7 +43,7 @@ export class RepeatCommand extends BaseCommand {
             message.channel.send(createEmbed("info", `${modeEmoji[message.guild!.queue!.loopMode]} Repeating ${modeTypes[message.guild!.queue!.loopMode]}`))
                 .catch(e => this.client.logger.error("REPEAT_CMD_ERR:", e));
         } else {
-            message.channel.send(createEmbed("error", `Invalid value, see \`${this.client.config.prefix}help ${this.meta.name}\` for more info!`))
+            message.channel.send(createEmbed("error", `Valore non valido, digita \`${this.client.config.prefix}help ${this.meta.name}\` per ulteriori info!`))
                 .catch(e => this.client.logger.error("REPEAT_CMD_ERR:", e));
         }
     }

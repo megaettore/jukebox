@@ -18,7 +18,7 @@ export class StopCommand extends BaseCommand {
         message.guild?.queue?.voiceChannel?.leave();
         message.guild!.queue = null;
 
-        message.channel.send(createEmbed("info", "⏹ Queue stopped."))
+        message.channel.send(createEmbed("info", "⏹ La coda è stata arrestata, sei stato tu a fare la spia?."))
             .catch(e => this.client.logger.error("STOP_CMD_ERR:", e));
     }
 }
